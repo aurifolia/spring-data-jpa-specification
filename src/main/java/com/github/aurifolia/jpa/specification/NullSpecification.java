@@ -15,6 +15,9 @@ import org.springframework.data.jpa.domain.Specification;
  */
 @RequiredArgsConstructor
 public class NullSpecification<T> implements Specification<T> {
+    /**
+     * attribute name
+     */
     private final String attributeName;
 
     @Override

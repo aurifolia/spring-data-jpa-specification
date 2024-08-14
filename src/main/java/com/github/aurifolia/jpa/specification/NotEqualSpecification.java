@@ -15,7 +15,13 @@ import org.springframework.data.jpa.domain.Specification;
  */
 @RequiredArgsConstructor
 public class NotEqualSpecification<T> implements Specification<T> {
+    /**
+     * attribute name
+     */
     private final String attributeName;
+    /**
+     * value
+     */
     private final transient Object value;
 
     @Override

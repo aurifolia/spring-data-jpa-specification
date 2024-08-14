@@ -22,10 +22,18 @@ public class SpecificationBuilder<T> {
     private final List<Specification<T>> specifications = new ArrayList<>();
     private final Predicate.BooleanOperator operator;
 
+    /**
+     * default constructor
+     */
     public SpecificationBuilder() {
         this.operator = AND;
     }
 
+    /**
+     * constructor
+     *
+     * @param operator Predicate.BooleanOperator
+     */
     public SpecificationBuilder(Predicate.BooleanOperator operator) {
         this.operator = operator;
     }
@@ -64,7 +72,7 @@ public class SpecificationBuilder<T> {
 
     /**
      * If the condition is true, then the query statement is appended.
-     * <p>where {attributeName} > {value}</p>
+     * <p>where {attributeName} &gt; {value}</p>
      *
      * @param condition     condition
      * @param attributeName attributeName
@@ -81,7 +89,7 @@ public class SpecificationBuilder<T> {
 
     /**
      * If the condition is true, then the query statement is appended.
-     * <p>where {attributeName} >= {value}</p>
+     * <p>where {attributeName} &gt;= {value}</p>
      *
      * @param condition     condition
      * @param attributeName attributeName
@@ -98,7 +106,7 @@ public class SpecificationBuilder<T> {
 
     /**
      * If the condition is true, then the query statement is appended.
-     * <p>where {attributeName} < {value}</p>
+     * <p>where {attributeName} &lt; {value}</p>
      *
      * @param condition     condition
      * @param attributeName attributeName
@@ -115,7 +123,7 @@ public class SpecificationBuilder<T> {
 
     /**
      * If the condition is true, then the query statement is appended.
-     * <p>where {attributeName} <= {value}</p>
+     * <p>where {attributeName} &lt;= {value}</p>
      *
      * @param condition     condition
      * @param attributeName attributeName

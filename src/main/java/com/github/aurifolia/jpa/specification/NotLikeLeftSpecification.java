@@ -15,8 +15,17 @@ import org.springframework.data.jpa.domain.Specification;
  */
 @RequiredArgsConstructor
 public class NotLikeLeftSpecification<T> implements Specification<T> {
+    /**
+     * pattern
+     */
     private static final String LIKE_PATTERN = "%%%s";
+    /**
+     * attribute name
+     */
     private final String attributeName;
+    /**
+     * keyword
+     */
     private final String keyword;
 
     @Override

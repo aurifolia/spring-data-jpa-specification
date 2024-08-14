@@ -17,7 +17,13 @@ import java.util.Collection;
  */
 @RequiredArgsConstructor
 public class NotInSpecification<T> implements Specification<T> {
+    /**
+     * attribute name
+     */
     private final String attributeName;
+    /**
+     * values
+     */
     private final Collection<?> values;
 
     @Override

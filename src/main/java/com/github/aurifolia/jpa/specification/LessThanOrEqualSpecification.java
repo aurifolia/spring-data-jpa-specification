@@ -8,14 +8,20 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
 
 /**
- * where {attributeName} <= {value}
+ * where {attributeName} &lt;= {value}
  *
  * @author Peng Dan
  * @since 1.0
  */
 @RequiredArgsConstructor
 public class LessThanOrEqualSpecification<T> implements Specification<T> {
+    /**
+     * attribute name
+     */
     private final String attributeName;
+    /**
+     * value
+     */
     private final transient Comparable<Object> value;
 
     @Override

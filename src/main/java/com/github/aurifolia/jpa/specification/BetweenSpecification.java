@@ -15,8 +15,17 @@ import org.springframework.data.jpa.domain.Specification;
  */
 @RequiredArgsConstructor
 public class BetweenSpecification<T> implements Specification<T> {
+    /**
+     * attribute name
+     */
     private final String attributeName;
+    /**
+     * lower value
+     */
     private final Comparable<Object> lower;
+    /**
+     * upper value
+     */
     private final Comparable<Object> upper;
 
     @Override
