@@ -1,8 +1,12 @@
 ### Description
-This is a tool for Specification in spring-boot-starter-data-jpa that provides a quick way to construct dynamic query conditions
+
+This is a tool for Specification in spring-boot-starter-data-jpa that provides a quick way to construct dynamic query
+conditions
 
 ### Example
+
 #### prepare
+
 ```sql
 create table user_info (
     id bigint auto_increment primary key,
@@ -10,7 +14,9 @@ create table user_info (
     nickname varchar(32)
 )
 ```
+
 ```java
+
 @Data
 @Entity
 @Table(name = "user_info")
@@ -31,8 +37,11 @@ class UserQuery {
     private String nickname;
 }
 ```
+
 #### equal
+
 Let's query for users whose username is Tom and whose nickname is Cat
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -48,7 +57,9 @@ public void function() {
 ```
 
 #### not equal
+
 Let's query for users whose username is not Tom
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -62,7 +73,9 @@ public void function() {
 ```
 
 #### greater than
+
 Let's query for users whose ID is greater than 20
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -72,7 +85,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### greater than or equal
+
 Let's query for users whose ID is greater than or equal 20
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -82,7 +97,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### less than
+
 Let's query for users whose ID is less than 20
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -92,7 +109,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### greater than or equal
+
 Let's query for users whose ID is less than or equal 20
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -102,7 +121,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### like
+
 Let's query for users whose username contains Tom
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -112,7 +133,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### like left
+
 Let's query for users whose username ends with Tom
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -122,7 +145,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### like right
+
 Let's query for users whose username starts with Tom
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -132,7 +157,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### not like
+
 Let's query for users whose username doesn't include Tom
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -142,7 +169,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### not like left
+
 Let's query for users whose username doesn't end with Tom
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -152,7 +181,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### not like right
+
 Let's query for users whose username doesn't start with Tom
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -162,7 +193,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### in
-select ... where username in ('Tom', 'Cat') 
+
+select ... where username in ('Tom', 'Cat')
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -172,7 +205,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### not in
+
 select ... where username not in ('Tom', 'Cat')
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -182,7 +217,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### is null
+
 select ... where nickname is null
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -192,7 +229,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### is not null
+
 select ... where nickname is not null
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -202,7 +241,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### between
+
 select ... where id between 20 and 30
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -212,7 +253,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### or
+
 select ... where id = 20 or id = 30
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();
@@ -223,7 +266,9 @@ public List<User> query(UserQuery query) {
 ```
 
 #### complex query
+
 select ... where (id = 20 or id = 30) and (username like '%Tom%' or username like '%Cat%')
+
 ```java
 public List<User> query(UserQuery query) {
     SpecificationBuilder<User> builder = new SpecificationBuilder<>();

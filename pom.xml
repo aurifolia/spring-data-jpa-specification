@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.aurifolia</groupId>
     <artifactId>spring-data-jpa-specification</artifactId>
     <version>1.0</version>
-    <description>This is a tool for Specification in spring-boot-starter-data-jpa that provides a quick way to construct dynamic query conditions</description>
+    <description>This is a tool for Specification in spring-boot-starter-data-jpa that provides a quick way to construct
+        dynamic query conditions
+    </description>
     <url>https://github.com/aurifolia/spring-data-jpa-specification</url>
 
     <licenses>
@@ -18,7 +20,8 @@
     </licenses>
     <scm>
         <connection>scm:git:https://github.com/aurifolia/spring-data-jpa-specification.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:aurifolia/spring-data-jpa-specification.git</developerConnection>
+        <developerConnection>scm:git:ssh://git@github.com:aurifolia/spring-data-jpa-specification.git
+        </developerConnection>
         <url>https://github.com/aurifolia/spring-data-jpa-specification</url>
     </scm>
     <developers>

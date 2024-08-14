@@ -1,6 +1,5 @@
 package io.github.aurifolia.jpa;
 
-import com.github.aurifolia.jpa.specification.*;
 import io.github.aurifolia.jpa.specification.*;
 import jakarta.persistence.criteria.Predicate;
 import org.springframework.data.jpa.domain.Specification;
