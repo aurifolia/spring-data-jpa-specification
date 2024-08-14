@@ -4,7 +4,9 @@ This is a tool for Specification in spring-boot-starter-data-jpa that provides a
 conditions
 
 ### Usage
+
 #### maven
+
 ```xml
 
 <dependencies>
@@ -26,6 +28,7 @@ conditions
 ```
 
 #### gradle
+
 ```groovy
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
