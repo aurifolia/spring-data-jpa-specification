@@ -3,6 +3,37 @@
 This is a tool for Specification in spring-boot-starter-data-jpa that provides a quick way to construct dynamic query
 conditions
 
+### Usage
+#### maven
+```xml
+<dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>com.h2database</groupId>
+        <artifactId>h2</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+    <dependency>
+        <groupId>io.github.aurifolia</groupId>
+        <artifactId>spring-data-jpa-specification</artifactId>
+        <version>1.0</version>
+    </dependency>
+</dependencies>
+```
+
+#### gradle
+```groovy
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    runtimeOnly 'com.h2database:h2'
+    implementation 'io.github.aurifolia:spring-data-jpa-specification:1.0'
+}
+
+```
+
 ### Example
 
 #### prepare
